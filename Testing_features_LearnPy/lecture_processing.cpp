@@ -16,7 +16,10 @@ void test(){
 }
 
 std::map<QString, QString> replace_str = {
-    {"}", "</span>"},
+    {"}r", "</span>"},
+    {"}g", "</span>"},
+    {"}b", "</span>"},
+    {"}s20", "</span>"},
     {"r{", "<span style='color: red'>"},
     {"g{", "<span style='color: green'>"},
     {"b{", "<span style='font-weight: bold'>"},
