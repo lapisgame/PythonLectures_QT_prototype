@@ -1,0 +1,76 @@
+Лекция 1
+
+Установка
+Для начала нам потребуется скачать питон с официального сайта. Важно (!) поставить галочку add python __ to PATH. Затем нажать Install now. После чего запустить скаченный файл.
+Можно работать с питоновскими файлами и без среды разработки (IDE), но это не совсем удобно, так как для запуска файла с расширение .py в терминале (это командная строка или же cmd) придется после перехода в директорию с файлом написать python ___.py, после чего в консоли появится результат выполнения программы.
+Более легкий способ потребует для запуска нажать на одну кнопку. И вариант этот называется PyCharm. Скачать можно с сайта <font style='color:#70AD47'>https://www.jetbrains.com/pycharm/download/</font><font style='color:#70AD47'> </font>. Нужна Community версия, она полностью бесплатна и почти не имеет обрезанного функционала, так как программировать мы будем только на Питоне. А профессиональная версия включает в себя еще расширенные инструменты для разработки на HTML, JS и баз данных SQL.
+
+Арифметические операции 
+Рассмотрим простейшие арифметические операции и как они выглядят на Питоне:
+Сложение  <font style='color:#7030A0'>+ (+=)</font>:   3 + 2 = 5
+Вычитание  <font style='color:#7030A0'>- (-=)</font>:  3 – 2 = 1
+Умножение  <font style='color:#7030A0'>* (*=)</font>:  3 * 2 = 6
+Возведение в степень  <font style='color:#7030A0'>**</font>:  3 ** 2 = 9
+Деление  <font style='color:#7030A0'>/ (/=)</font>:  7 / 3 = 2.333333…
+Целая часть от деления  <font style='color:#7030A0'>//</font>:  7 // 3 = 2
+Остаток от деления  <font style='color:#7030A0'>%</font>:  7 % 3 = 1
+
+Переменные и синтаксис
+Python может определить тип переменной: для x = 1.35 будет выведен тип FLOAT. 
+Что будет выведено, если
+<font style='color:#4472C4'>x</font><font style='color:#4472C4'> = </font><font style='color:#4472C4'>input</font><font style='color:#4472C4'>()   </font>
+<font style='color:#4472C4'>y</font><font style='color:#4472C4'> = </font><font style='color:#4472C4'>input</font><font style='color:#4472C4'>(</font><font style='color:#2E74B5'>)</font><font style='color:#4472C4'> </font>
+<font style='color:#2E74B5'>print</font><font style='color:#2E74B5'>(</font><font style='color:#2E74B5'>x</font><font style='color:#2E74B5'>+</font><font style='color:#2E74B5'>y</font><font style='color:#2E74B5'>) </font><font style='color:#2E74B5'>  </font>
+
+при введении чисел 123 и 354. Должно быть 477? Нет, 123354. Всё это связанно с динамической типизацией и тем, что input выдает строковое значение. Чтобы преобразовать переменную одного типа в другой, мы можем использовать следующие функции:
+str(х) - переводит переменную х в строковую
+int(х) – переводит переменную х в целочисленную
+float(х) – переводит переменную х в переменную с плавающей точкой
+Тип bool – это  логические переменные, то есть принимающие значение True (истина) или False (ложь).
+Ко всем переменным можно просто обращаться по имени и получать их значение. Но строковые переменные – особенные, и к ним можно обращаться по индексу символа. Индексация в строке происходит с нуля. Вывести длину строковой переменной можно командой len(s). Пример обращения к строке по индексу:
+<font style='color:#4472C4'>S</font><font style='color:#4472C4'>=’</font><font style='color:#4472C4'>spam</font><font style='color:#4472C4'>’</font>
+<font style='color:#4472C4'>print</font><font style='color:#4472C4'>(</font><font style='color:#4472C4'>S</font><font style='color:#4472C4'>[0])  >> </font><font style='color:#4472C4'>s</font>
+<font style='color:#4472C4'>print(S[2])  >> a</font>
+<font style='color:#4472C4'>print(S[-2]) >>a</font>
+Строки можно умножать на числа, складывать между собой.
+<font style='color:#4472C4'>S1 = 'spam'</font>
+<font style='color:#4472C4'>S2 = 'eggs'</font>
+<font style='color:#4472C4'>print(S1 + S2)</font><font style='color:#4472C4'>	>>'spameggs'</font>
+
+<font style='color:#4472C4'>print</font><font style='color:#4472C4'>('</font><font style='color:#4472C4'>spam</font><font style='color:#4472C4'>' * 3)  >></font><font style='color:#4472C4'>spamspamspam</font>
+
+Строковые переменные можно доставать «срезами», делается это так:
+название_переменной[X:Y], где X – начало среза, а Y – окончание;
+символ с номером Y в срез не входит. По умолчанию первый индекс равен 0, а второй - длине строки.
+<font style='color:#4472C4'>s = 'spameggs'</font>
+<font style='color:#4472C4'>>>> s[3:5] >>'me'</font>
+<font style='color:#4472C4'>>>> s[2:-2] >>'ameg'</font>
+<font style='color:#4472C4'>>>> </font><font style='color:#4472C4'>s</font><font style='color:#4472C4'>[:6]</font><font style='color:#4472C4'>	>>'</font><font style='color:#4472C4'>spameg</font><font style='color:#4472C4'>'</font>
+<font style='color:#4472C4'>>>> </font><font style='color:#4472C4'>s</font><font style='color:#4472C4'>[1:]</font><font style='color:#4472C4'>	>>'</font><font style='color:#4472C4'>pameggs</font><font style='color:#4472C4'>'</font>
+
+Функции для перевода всей строки в верхний регистр _.upper(), а для перевода всей строки в нижний регистр _.lower(), _.title() это перевод начальных символов всех слов в верхний регистр, _.capitalize() только первый символ заглавный. 
+Сбор строки из массива осуществляется так
+ переменная = “способ связи”.join (название массива) или вместо массива можно указать название строковой переменной для разделения между каждым символом указанным способом связи.
+Условные операторы
+Синтаксис условных операторов if elif else:
+<font style='color:#4472C4'>if</font><font style='color:#4472C4'> условия 1: </font>
+<font style='color:#4472C4'><font style='color:white'>----</font>действие 1</font>
+<font style='color:#4472C4'>elif</font><font style='color:#4472C4'> условие 2:</font>
+<font style='color:#4472C4'><font style='color:white'>----</font>действие 2</font>
+<font style='color:#4472C4'>else</font><font style='color:#4472C4'>:</font>
+<font style='color:#4472C4'><font style='color:white'>----</font>действие 3</font>
+Блок elif является необязательным и конструкцию if elif else можно построить обычным образом если иначе –  if else. Elif может быть сколько угодно.
+
+Укороченная версия if-else:
+<font style='color:#4472C4'>if</font><font style='color:#4472C4'> </font><font style='color:#4472C4'>X</font><font style='color:#4472C4'>:</font>
+<font style='color:#4472C4'><font style='color:white'>----</font></font><font style='color:#4472C4'>A</font><font style='color:#4472C4'>=</font><font style='color:#4472C4'>Y</font>
+<font style='color:#4472C4'>else</font><font style='color:#4472C4'>:</font>
+<font style='color:#4472C4'><font style='color:white'>----</font></font><font style='color:#4472C4'>A</font><font style='color:#4472C4'>=</font><font style='color:#4472C4'>Z</font>
+Можно также написать A=Y if X else Z. В литературе этот прием называется трехместное выражение if-else.
+
+Логические операции
+Сравнение возвращает логическое значение.
+Рассмотрим основные логические операторы: X and Y – логическое И (выдает истину только когда Х И Y истинны), X or Y – логическое ИЛИ (выдает истину, если хотя бы 1 из двух истинно), X xor Y – взаимоисключающее ИЛИ (является истиной, если только одно из двух истина), not X – логическое отрицание (инверсия).
+
+
+
