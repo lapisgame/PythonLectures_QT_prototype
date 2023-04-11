@@ -17,5 +17,6 @@ public:
 
 private:
     Ui::LLearnPy *ui;
+    void setInterfaceStyle();
 };
 #endif // LLEARNPY_H

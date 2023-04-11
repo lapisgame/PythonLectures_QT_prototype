@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/image/back.png</file>
+        <file>res/image/ico3232.png</file>
+        <file>res/font/Lumberjack.otf</file>
+    </qresource>
+</RCC>
