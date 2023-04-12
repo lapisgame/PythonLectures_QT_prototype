@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1268</width>
-    <height>670</height>
+    <height>757</height>
    </rect>
   </property>
   <property name="font">
@@ -37,7 +37,7 @@
      <rect>
       <x>30</x>
       <y>-10</y>
-      <width>361</width>
+      <width>381</width>
       <height>91</height>
      </rect>
     </property>
@@ -54,6 +54,88 @@
      <string>Lapis\Learn\Python</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="aboutButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>670</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>JetBrains Mono</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>О программе</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="LectureButton">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>280</y>
+      <width>191</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>JetBrains Mono</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Лекции</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="TaskButton">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>280</y>
+      <width>191</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>JetBrains Mono</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#TaskButton::hover{
+	display: flex;	
+	margin: auto;
+}</string>
+    </property>
+    <property name="text">
+     <string>Задачи</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="SandboxButton">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>280</y>
+      <width>191</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>JetBrains Mono</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Песочница</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -61,7 +143,7 @@
      <x>0</x>
      <y>0</y>
      <width>1268</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>

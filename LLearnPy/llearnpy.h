@@ -15,7 +15,11 @@ public:
     LLearnPy(QWidget *parent = nullptr);
     ~LLearnPy();
 
+    virtual void resizeEvent(QResizeEvent *event) override;
+
 private:
+    void updateButtonPosition();
+
     Ui::LLearnPy *ui;
     void setInterfaceStyle();
 };
