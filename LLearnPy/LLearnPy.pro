@@ -9,16 +9,31 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    aboutform.cpp \
+    lectureform.cpp \
     main.cpp \
     llearnpy.cpp \
+    sandboxform.cpp \
+    settingform.cpp \
+    taskform.cpp \
     windowstyledesign.cpp
 
 HEADERS += \
+    aboutform.h \
+    lectureform.h \
     llearnpy.h \
+    sandboxform.h \
+    settingform.h \
+    taskform.h \
     windowstyledesign.h
 
 FORMS += \
-    llearnpy.ui
+    aboutform.ui \
+    lectureform.ui \
+    llearnpy.ui \
+    sandboxform.ui \
+    settingform.ui \
+    taskform.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

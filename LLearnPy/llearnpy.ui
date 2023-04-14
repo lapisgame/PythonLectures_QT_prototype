@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1268</width>
-    <height>757</height>
+    <width>1300</width>
+    <height>800</height>
    </rect>
   </property>
   <property name="font">
@@ -88,6 +88,11 @@
       <pointsize>16</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton:hover{
+	box-shadow: 8px 10px 5px 2px rgba(0, 0, 255, .2)
+}</string>
+    </property>
     <property name="text">
      <string>Лекции</string>
     </property>
@@ -136,6 +141,25 @@
      <string>Песочница</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="SettingsButton">
+    <property name="geometry">
+     <rect>
+      <x>1120</x>
+      <y>670</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>JetBrains Mono</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Настройки</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -143,7 +167,7 @@
      <x>0</x>
      <y>0</y>
      <width>1268</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
