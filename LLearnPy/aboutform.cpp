@@ -22,4 +22,5 @@ void AboutForm::setInterfaceStyle(){
                                  this->height() - ui->BackButton->geometry().height() - 20,
                                  ui->BackButton->geometry().width(),
                                  ui->BackButton->geometry().height()});
+    ui->BackButton->setStyleSheet("font-size: 16px; background-color: grey; border-radius:10%");
 }
