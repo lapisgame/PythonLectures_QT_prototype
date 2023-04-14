@@ -1,5 +1,10 @@
 #include "llearnpy.h"
 #include "ui_llearnpy.h"
+#include "settingform.h"
+#include "lectureform.h"
+#include "taskform.h"
+#include "aboutform.h"
+#include "sandboxform.h"
 #include "windowstyledesign.h"
 #include <QFontDatabase>
 
@@ -57,3 +62,34 @@ void LLearnPy::setInterfaceStyle(){
     ui->SandboxButton->setStyleSheet("font-size: 26px; background-color: #519E70; border-radius:10%");
     this->setStyleSheet(WindowStyleDesign::getMainWindowStyle());
 }
+
+void LLearnPy::on_SettingsButton_clicked(){
+    SettingForm *settingForm = new SettingForm();
+    settingForm->show();
+    this->hide();
+}
+
+void LLearnPy::on_TaskButton_clicked(){
+    TaskForm *taskForm = new TaskForm();
+    taskForm->show();
+    this->hide();
+}
+
+void LLearnPy::on_SandboxButton_clicked(){
+    SandboxForm *sandboxForm = new SandboxForm();
+    sandboxForm->show();
+    this->hide();
+}
+
+void LLearnPy::on_aboutButton_clicked(){
+    AboutForm *aboutForm = new AboutForm();
+    aboutForm->show();
+    this->hide();
+}
+
+void LLearnPy::on_LectureButton_clicked(){
+    LectureForm *lectureForm = new LectureForm();
+    lectureForm->show();
+    this->hide();
+}
+

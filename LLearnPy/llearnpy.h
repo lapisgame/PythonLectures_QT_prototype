@@ -11,16 +11,27 @@ class LLearnPy : public QMainWindow
 {
     Q_OBJECT
 
-public:
-    LLearnPy(QWidget *parent = nullptr);
-    ~LLearnPy();
+    public:
+        LLearnPy(QWidget *parent = nullptr);
+        ~LLearnPy();
 
-    virtual void resizeEvent(QResizeEvent *event) override;
+        virtual void resizeEvent(QResizeEvent *event) override;
 
-private:
-    void updateButtonPosition();
+    private slots:
+        void on_SettingsButton_clicked();
 
-    Ui::LLearnPy *ui;
-    void setInterfaceStyle();
+        void on_TaskButton_clicked();
+
+        void on_SandboxButton_clicked();
+
+        void on_aboutButton_clicked();
+
+        void on_LectureButton_clicked();
+
+    private:
+        void updateButtonPosition();
+
+        Ui::LLearnPy *ui;
+        void setInterfaceStyle();
 };
 #endif // LLEARNPY_H
